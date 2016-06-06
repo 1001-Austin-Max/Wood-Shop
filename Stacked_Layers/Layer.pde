@@ -35,6 +35,7 @@ class NormalLayer extends Layer { //layers where every segment is the same
     anglePerSegment = TWO_PI/numberOfSides;
     circleR = radius/cos(anglePerSegment/2); //largest radius of bowl
     depthR = (radius-depth)/cos(anglePerSegment/2);
+    //float x, float y, float w, float h, float min, float max, float s, String title, color background, color sliderColor
     for (int i = 0; i<numberOfSides; i++) {
       segments.add(new Segment(anglePerSegment, circleR, depthR, thickness, i*anglePerSegment));
     }
@@ -52,6 +53,8 @@ class SegmentedLayer extends Layer { //layer with a divider between each layer
     anglePerSegment = (TWO_PI-(anglePerDiv*numberOfSides))/numberOfSides;
     circleR = radius/cos(anglePerSegment/2);
     depthR = (radius-depth)/cos(anglePerSegment/2);
+    //float x, float y, float w, float h, float min, float max, float s, String title, color background, color sliderColor
+    
     float rot = (anglePerSegment+anglePerDiv)/2;
     for (float i = 0; i < TWO_PI; i+=rot) {
       segments.add(new Segment(anglePerSegment, circleR, depthR, thickness, i));
@@ -64,12 +67,31 @@ class SegmentedLayer extends Layer { //layer with a divider between each layer
 abstract class Layer {
   int numberOfSides;
   float radius, depth, thickness, anglePerSegment, circleR, depthR;//in inches radius is the smallest radius that the segments create since that is the biggest possible radius for the turned layer
-  boolean mouseOver;
+  boolean mouseOver, showSliders;
   ArrayList<Segment> segments = new ArrayList<Segment>();
+  Slider numberOfSegments;
+  Slider thicknessSlid;
+  Slider radiusSlid;
+  Slider depthSlid;
+  
   void display(float x, float y) {
+    strokeWeight(3);
     for (Segment s : segments) {
       s.display(x, y);
       //shape3D(vertices, 200);
+    }
+    checkEditing();
+    //if(showSliders){
+    //  numberOfSegments.display();
+    //  thicknessSlid.display();
+    //  radiusSlid.display();
+    //  depthSlid.display();
+    //}
+  }
+  
+  void checkEditing(){
+    if(editing == this){
+      showSliders = true;
     }
   }
 }
