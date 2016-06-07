@@ -69,29 +69,47 @@ abstract class Layer {
   float radius, depth, thickness, anglePerSegment, circleR, depthR;//in inches radius is the smallest radius that the segments create since that is the biggest possible radius for the turned layer
   boolean mouseOver, showSliders;
   ArrayList<Segment> segments = new ArrayList<Segment>();
-  Slider numberOfSegments;
+  String type;
+  DropDownList typeList;
+  Counter numberOfSegments;
   Slider thicknessSlid;
   Slider radiusSlid;
   Slider depthSlid;
+  Slider divSlid;
+  float startY = 50;
+  float ySpacer = 30;
+  float xSpace = controlPanelX+20;
+  float slidWidth = 150;
+  float elemHeight = 50;
+  float countWidth = 100;
+  String[] opt = {"Normal", "Divided"};
+  
+  Layer(){
+    startY+=ySpacer+25;
+    typeList = new DropDownList(xSpace, startY, slidWidth, elemHeight, opt, "Type Of Layer"); 
+    startY+=ySpacer;
+    startY+=typeList.h;
+    numberOfSegments = new Counter(xSpace, startY, countWidth, 12, #69B9E3, "Number Of Segments");
+    startY+=ySpacer;
+    startY+=numberOfSegments.h; //float x, float y, float w, float h, float min, float max, float s, String title, color background, color sliderColor
+    thicknessSlid = new Slider(xSpace, startY, slidWidth, elemHeight, 0.25, 12, 0.25, "Thickness", #69B9E3, #2F96CB);
+    startY+=ySpacer;
+    startY+=elemHeight;
+    radiusSlid = new Slider(xSpace, startY, slidWidth, elemHeight, 0.25, 36, 0.25, "Radius", #69B9E3, #2F96CB);
+    startY+=ySpacer;
+    startY+=elemHeight;
+    depthSlid = new Slider(xSpace, startY, slidWidth, elemHeight, 0, this.radius-0.25, 0, "Depth", #69B9E3, #2F96CB);
+    startY+=ySpacer;
+    startY+=elemHeight;
+    divSlid = new Slider(xSpace, startY, slidWidth, elemHeight, 0, 10, 0, "Divider Width", #69B9E3, #2F96CB);
+  }
   
   void display(float x, float y) {
     strokeWeight(3);
+    stroke(0);
     for (Segment s : segments) {
+      fill(255);
       s.display(x, y);
-      //shape3D(vertices, 200);
-    }
-    checkEditing();
-    //if(showSliders){
-    //  numberOfSegments.display();
-    //  thicknessSlid.display();
-    //  radiusSlid.display();
-    //  depthSlid.display();
-    //}
-  }
-  
-  void checkEditing(){
-    if(editing == this){
-      showSliders = true;
     }
   }
 }

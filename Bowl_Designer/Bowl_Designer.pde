@@ -1,11 +1,15 @@
 float x;
 float y;
+float controlPanelX, controlPanelWidth;
 Layer l; 
 Layer editing;
 
 Bowl b;
 void setup(){
   size(1000,800, P3D);
+  colorMode(HSB);
+  controlPanelX = width-230;
+  controlPanelWidth = 230;
   x= width/2;
   y= height-300;
   b = new Bowl();
@@ -24,7 +28,24 @@ void draw(){
     b.display();
   }
   else{
+    fill(150);
+    rect(controlPanelX, 0, controlPanelWidth, height);
+    pushMatrix();
+    translate(width/2, height/2);
+    scale((width-200)/((1.2*editing.radius)+width));
+    translate(-width/2, -height/2);
+    translate(-250, 0);
     editing.display(width/2,height/2);
+    popMatrix();
+    
+    textSize(25);
+    text("Edit Layer", editing.xSpace, 20);
+    editing.typeList.display();
+    editing.numberOfSegments.display();
+    editing.thicknessSlid.display();
+    editing.radiusSlid.display();
+    editing.depthSlid.display();
+    editing.divSlid.display();
   }
 }
 float start = 0;

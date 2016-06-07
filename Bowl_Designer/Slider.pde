@@ -18,7 +18,7 @@ class Slider {
     val = constrain(start, min, max);
     size = max-min; //units
     increment = (size)/w; //pixels
-    sliderSize = 5*increment;//pixels
+    sliderSize = 5;//pixels
     sliderY = y;
     sliderX = x+(start*increment);
     this.background = background;
@@ -37,7 +37,7 @@ class Slider {
     fill(textColor);
     text(title, x, y - 4);
     textAlign(LEFT, TOP);
-    text(round(val), sliderX, y+h+4);
+    text(val, sliderX, y+h+4);
   }
 
   boolean holding = false;
@@ -48,7 +48,7 @@ class Slider {
     if (holding) {
       sliderX = constrain(mouseX, x, x+w-sliderSize);
       val = constrain(increment*(mouseX-x)+min, min, max);
-      add = color(0, 0, 40);
+      add = color(0, 0, 15);
       if (!mousePressed) {
         holding = false;
       }
@@ -56,7 +56,7 @@ class Slider {
       add = color(0, 0, 0);
     }
     if (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h && !holding) {
-      add = color(0, 0, 20);
+      add = color(0, 0, 5);
     }
   }
 }
