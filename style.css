@@ -20,8 +20,8 @@ header {
   vertical-align: middle;
   width: 100%;
   height: 100px;
-  background-image: linear-gradient(0deg, rgb(80, 62, 43), rgb(51, 38, 6));
-  color: rgba(221, 186, 140, 0.8);
+  /*background-image: linear-gradient(0deg, rgba(82, 80, 181), rgb(42, 129, 166));*/
+  color: rgba(209, 167, 94, 0.8);
   font-family: Impact;
   font-size: 28px;
   margin-top: -20px;
@@ -38,20 +38,32 @@ main {
 }
 
 footer {
-  width:500px;
-  height: 100px;
-  margin: auto;
+  width:60vw;
+  height: 80px;
+  margin:auto;
   margin-top: 50px;
-  display: block;
-  background-color: rgba(#f60000);
-  color: black;
-  font-size: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(195, 146, 105, 0.9);
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+footer p{
+  margin-left: 10px;
+  margin-right: 37%;
+}
+
+footer ul {
+  list-style-type: none;
 }
 
 #navbar {
   margin: 0px;
   padding: 0px 0px 0px 5px;
-  width: inherit;
+  width: 100vw;
   list-style-type: none;
   overflow: hidden;
   background-color: #333;
@@ -77,4 +89,17 @@ footer {
 
 .selected {
   background-color: rgb(209, 177, 41);
+}
+
+.floating {
+  position: fixed;
+  top: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

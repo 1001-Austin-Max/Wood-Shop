@@ -1,8 +1,18 @@
-
 $(document).ready(function(){
   getSelected();
-  // $('#navbar ul li a').addClass('selected');
-  // console.log($('a').attr('href'));
+  var originalNavBarTop = $('#navbar').position().top;
+  $(window).scroll(function(){
+    var top = $(window).scrollTop();
+    if(top >= $('#navbar').position().top){
+      $('#navbar').addClass('floating');
+      var newTopMargin = '46px';
+      $('main').css('margin-top', newTopMargin);
+    } if(top <= originalNavBarTop){
+      var newTopMargin = '10px'
+      $('#navbar').removeClass('floating');
+      $('main').css('margin-top', newTopMargin);
+    }
+  });
 });
 
 var getSelected = function(){
