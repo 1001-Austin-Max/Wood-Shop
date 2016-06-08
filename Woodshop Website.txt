@@ -1,0 +1,38 @@
+Wood Shop Website
+
+Owner: Me
+
+What is important?
+It looks good
+I am proud of it
+Be able to share my projects
+
+Audience:
+Students (Joinery and Turning)
+Teachers
+College admission people
+
+What is important?
+
+ - Seeing instructions on how to make things
+ - Being able to share their projects
+ - Seeing what I do in the woodshop
+ - Seeing my skillset
+ - Useful tools (Bowl Designer)
+
+OVERALL GOAL: To try to showcase my excitement about the woodshop and get others to match
+that excitement
+
+FEATURES:
+
+ - Welcome + Navigation
+
+ - Project Blog (Get Inspired)
+
+ - Tools for starting new projects (Tool Belt)
+
+ - T.A. Section (Help)
+    - Turning
+    - Furniture
+    - Joinery
+ 
