@@ -4,6 +4,7 @@ class Counter {
   color buttonColor;
   int plusAdd, minusAdd;
   String name;
+  boolean active = true;
 
   Counter(float x, float y, float size, int start, color buttonColor, String name) {
     this.x = x;
@@ -50,7 +51,7 @@ class Counter {
   boolean added = false;
   boolean subbed = false;
   void checkMouseOver() {
-    if (mouseX > x && mouseX < x+bWidth && mouseY > y && mouseY < y+h && mousePressed) {
+    if (mouseX > x && mouseX < x+bWidth && mouseY > y && mouseY < y+h && mousePressed && active) {
       minusAdd = 30;
       if(!subbed){
         val--;
@@ -64,7 +65,7 @@ class Counter {
       subbed = false;
     }
 
-    if (mouseX > x+(bWidth*2) && mouseX < x+w && mouseY > y && mouseY < y+h && mousePressed) {
+    if (mouseX > x+(bWidth*2) && mouseX < x+w && mouseY > y && mouseY < y+h && mousePressed && active) {
       plusAdd = 30;
       if(!added){
         val++;

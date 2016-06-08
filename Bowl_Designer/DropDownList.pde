@@ -3,6 +3,7 @@ class DropDownList {
   String[] options;
   String name;
   String current;
+  boolean active = true;
   
   DropDownList(float x, float y, float w, float h, String[] o, String name){
     this.x = x;
@@ -31,7 +32,7 @@ class DropDownList {
   }
   boolean opt = false;
   void checkMouseOver(){
-    if(mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h && mousePressed){
+    if(mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h && mousePressed && active){
       opt =true;
     }
   }

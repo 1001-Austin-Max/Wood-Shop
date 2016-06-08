@@ -6,6 +6,7 @@ class Slider {
   color background, sliderColor;
   color textColor = 0;
   color add;
+  boolean active = true;
   //val is in the increment of width/limit
   Slider(float x, float y, float w, float h, float min, float max, float s, String title, color background, color sliderColor) {
     this.x = x; //pixels \/
@@ -42,7 +43,7 @@ class Slider {
 
   boolean holding = false;
   void mouseOver() {
-    if (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h && mousePressed) {
+    if (mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h && mousePressed && active) {
       holding = true;
     } 
     if (holding) {
