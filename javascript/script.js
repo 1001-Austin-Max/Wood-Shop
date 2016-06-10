@@ -1,23 +1,14 @@
-$(document).ready(function(){
-  getSelected();
-  var originalNavBarTop = $('#navbar').position().top;
-  $(window).scroll(function(){
-    var top = $(window).scrollTop();
-    if(top >= $('#navbar').position().top){
-      $('#navbar').addClass('floating');
-      var newTopMargin = '46px';
-      $('main').css('margin-top', newTopMargin);
-    } if(top <= originalNavBarTop){
-      var newTopMargin = '10px'
-      $('#navbar').removeClass('floating');
-      $('main').css('margin-top', newTopMargin);
-    }
+$(function(){
+  $('*').click(function(){
+    var clicked = $(this);
+    $('div[id='+clicked.attr('href')+']').siblings().hide(600, function(){
+      $('div[id='+clicked.attr('href')+']').show(600);
+    });
+  });
+  $('header button').click(function(){
+    $('main').removeClass('hide');
+    $('header').animate({height: '80vh'}, 600, function(){
+      $('main').show(600);
+    });
   });
 });
-
-var getSelected = function(){
-  var current = location.pathname.split('/').slice(-1)[0];
-  $('#navbar a').removeClass('selected');
-  $('a[href*='+'"'+current+'"'+']').parent().addClass('selected');
-  // console.log($('#navbar li a[href*='+current+']').attr('href'));
-};
