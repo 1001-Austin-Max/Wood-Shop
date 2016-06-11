@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="style.css">
-    <title>The Wood-Worker</title>
+    <title>The Wood Shop</title>
   </head>
   <body>
-    <header><h1>The Wood Shop</h1></header>
-    <ul id="navbar">
-      <li><a href="index.html">Home</a></li>
-      <li><a>The Lick Wilmerding Wood Shop</a></li>
-      <li><a>About Me</a></li>
-      <li><a href="Bowl_Designer.html">Design A Bowl</a></li>
-      <li><a>fasdfasd</a></li>
-    </ul>
-    <main>
-        <h2>Welcome To The Wood Shop</h2>
-        <article class="left">
-          <h3>The Art of Wood Working</h3>
-          <p>Wood working is the craft of using wood to create furniture, bowls, chairs, and much more.
-          Being proficient at using wood in a design sense requires: patience, attention to detail, and a willingness to learn.
-          Patience is very important in the wood shop because it allows the craftsman to not rush to a finished project, but to
-          use all the resources and skills available to them to create the best product possible. This brings us to the next skill:
-          attention to detail. Wood can be very tricky to manipulate and without a keen eye, a finished project's imperfections
-          can pile up. Finally, a key aspect in mastery of the wood-shop is an ability to learn. No one is immune from mistakes and
-          it's important to recognize mistakes in wood-working to learn and adapt in the next project</p>
-          <h3>Starting a Wood Project</h3>
-          <p>When you have an idea for a new project that gets you excited the first thing you want to do is start using the tools.
-           However, it's important to first go through the design process. During this process, you should:
-           <ol>
-             <li>Create an initial drawing or sketch</li>
-             <li>Plan out the dimensions of your project and what wood you'll use</li>
-             <li>Make a final design</li>
-             <li>Make a cut list</li>
-             <li>Make a step by step plan of what you'll do until the end</li>
-          </ol>
-           Doing this ensures that you've thought through every part of your project so that you won't </p>
-      </article>
+    <img src="resources/images/Wood_Shop_Logo.png" id="logo">
+    <header>
+      <h1>Create</h1>
+      <ul>
+        <li name="Imagine" id="content-selector">Imagine</li>
+        <li name="Build" id="content-selector">Build</li>
+        <li name="Design" id="content-selector">Desgin</li>
+      </ul>
+    </header>
+    <main class="hide">
+      <a href="top"></a>
+      <div id="section-title"></div>
+      <section id="Imagine">
+        <div id="navbar">
+          <h3>View Portfolios</h3>
+          <ul>
+            <li id ="content-selector" name="maxaustin">Max Austin</li>
+            <li id="content-selector" name="person1">Person1</li>
+            <li>Person2</li>
+            <li>Person3</li>
+          </ul>
+        </div>
+        <div class="pagecontent">
+          <section id="maxaustin" class="hide">This is maxaustin's page</section>
+          <section id="person1" class="hide">This is person1's page</section>
+        </div>
+      </section>
+      <section id="Design">
+        <p>Design</p>
+      </section>
+      <section id="Build" class="container">
+        <p>Build</p>
+      </section>
     </main>
     <footer>
-      <p>&#169 Max Austin 2016</p>
-      <ul class="right">
-        <li>Email: <a href="maxozzy22@gmail.com">maxozzy22@gmail.com</a></li>
-        <li>High School: Lick-Wilmerding High School</li>
-        <li>Address: 403 Ocean Avenus San Francisco</li>
-      </ul>
+
     </footer>
     <script type="text/javascript" src="javascript/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>

@@ -1,23 +1,15 @@
-$(document).ready(function(){
-  getSelected();
-  var originalNavBarTop = $('#navbar').position().top;
-  $(window).scroll(function(){
-    var top = $(window).scrollTop();
-    if(top >= $('#navbar').position().top){
-      $('#navbar').addClass('floating');
-      var newTopMargin = '46px';
-      $('main').css('margin-top', newTopMargin);
-    } if(top <= originalNavBarTop){
-      var newTopMargin = '10px'
-      $('#navbar').removeClass('floating');
-      $('main').css('margin-top', newTopMargin);
-    }
+$(function(){
+  $('header li').hover(function(){
+    $(this).toggleClass('hover', 200);
+  });
+
+  $('header li').click(function(){
+    $('#section-title').html("<h2>"+$(this).attr('name')+"</h2>");
+  });
+  $('html #content-selector').click(function(){
+    $('main').removeClass('hide');
+    $('header').animate({height: '50vh'});
+    $(this).addClass('active').siblings().removeClass('active');
+    $('#'+$(this).attr('name')).show(500).siblings().filter('section').hide(500);
   });
 });
-
-var getSelected = function(){
-  var current = location.pathname.split('/').slice(-1)[0];
-  $('#navbar a').removeClass('selected');
-  $('a[href*='+'"'+current+'"'+']').parent().addClass('selected');
-  // console.log($('#navbar li a[href*='+current+']').attr('href'));
-};
