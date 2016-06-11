@@ -8,35 +8,39 @@
   <body>
     <img src="resources/images/Wood_Shop_Logo.png" id="logo">
     <header>
-      <h1>Create</h1>
       <ul>
-        <li name="Imagine" id="content-selector">Imagine</li>
-        <li name="Build" id="content-selector">Build</li>
-        <li name="Design" id="content-selector">Desgin</li>
+        <li name="imagine" id="content-selector">Imagine</li>
+        <li name="design" id="content-selector">Desgin</li>
+        <li name="build" id="content-selector">Build</li>
       </ul>
     </header>
     <main class="hide">
-      <a href="top"></a>
-      <div id="section-title"></div>
-      <section id="Imagine">
-        <div id="navbar">
+      <section id="imagine" class="flex">
+        <ul id="navbar">
           <h3>View Portfolios</h3>
-          <ul>
-            <li id ="content-selector" name="maxaustin">Max Austin</li>
-            <li id="content-selector" name="person1">Person1</li>
-            <li>Person2</li>
-            <li>Person3</li>
-          </ul>
-        </div>
+          <li id ="content-selector" name="maxaustin">Max Austin</li>
+          <li id="content-selector" name="person1">Person1</li>
+          <li>Person2</li>
+          <li>Person3</li>
+        </ul>
         <div class="pagecontent">
-          <section id="maxaustin" class="hide">This is maxaustin's page</section>
+          <section id="maxaustin" class="hide">
+            <ul id="tabs">
+              <li id="content-selector" name="past-projects">Past Projects</li>
+              <li id="content-selector" name="clock-box">Clock Box</li>
+              <li id="content-selector" name="segmented-bowl">Segmented Bowl</li>
+            </ul>
+            <section id="past-projects" class="hide"></section>
+            <section id="clock-box" class="hide"></section>
+            <section id="segmented-bowl" class="hide"></section>
+          </section>
           <section id="person1" class="hide">This is person1's page</section>
         </div>
       </section>
-      <section id="Design">
+      <section id="design">
         <p>Design</p>
       </section>
-      <section id="Build" class="container">
+      <section id="build">
         <p>Build</p>
       </section>
     </main>

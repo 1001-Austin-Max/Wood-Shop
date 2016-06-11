@@ -7,12 +7,14 @@ html, body {
   font-family: 'Comfortaa';
   margin: 0px;
   background-color: ivory;
+  background: linear-gradient(45deg, rgba(45, 242, 165, 0.25),rgba(242, 199, 45, 0.3)), url(resources/images/wood-background.jpg);
+  background-size: cover;
+  height: 100%;
 }
 
 header {
   height: 100vh;
-  /*width: 100vw;*/
-  background: linear-gradient(45deg, rgba(45, 242, 224, 0.25),rgba(242, 199, 45, 0.3)), url(resources/images/wood-background.jpg);
+  width: 100vw;
   color: black;
   background-size: cover;
   display: flex;
@@ -24,14 +26,20 @@ header ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin: auto;
-  width: 60%;
+  width: 80%;
 }
 
 header li {
+  flex-grow: 1;
   background-color: slategrey;
   padding: 10px;
   box-shadow: 0px 5px 20px rgb(108, 108, 108);
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  width: 30%;
 }
 
 header li:first-of-type{
@@ -52,7 +60,11 @@ header h1 {
 }
 
 main {
+  height: 100%;
+}
 
+#imagine {
+  height: 100%;
 }
 
 #logo {
@@ -64,17 +76,18 @@ main {
 
 #navbar{
   background-color: lightsteelblue;
+  padding: 15px;
+  width: 20%;
+  height: 100%;
+  list-style-type: none;
   display: flex;
-  align-content: flex-end;
   flex-direction: column;
-  padding: 10px;
-  width: 25%;
-  align-self: stretch;
+  margin: 0px;
 }
 
-#navbar ul{
-  list-style-type: none;
-  float: left;
+#navbar li {
+  padding: 4px;
+  margin: 5px;
 }
 
 #navbar li:hover{
@@ -82,23 +95,39 @@ main {
 }
 
 #section-title {
-  background-color: goldenrod;
+  background-color: rgba(157, 157, 157);
   text-align: center;
-  width: 100vw;
-  margin: 0px;
   font-size: 30px;
-  display: block;
-  border: 2px solid gold;
+  margin: 0px 20px 0px 20px;
+  height: 70px;
 }
 
 section {
-  display: flex;
+  display: none;
   height: 100%;
+  width: 100%;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
+#tabs {
+  display: flex;
+  list-style-type: none;
+  height: 50px;
+  margin: auto;
+  padding: 0px;
+}
+
+#tabs li {
+  padding: 5px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 5px 10px rgba(140, 140, 140, 0.77);
+}
+
+#tabs li.active {
+  background-color: inherit;
+  box-shadow: 0px 5px 10px rgba(140, 140, 140, 0.77);
+  border-width: thick;
+  border-bottom: 2px solid blue;
 }
 
 .left {
@@ -114,12 +143,20 @@ section {
 }
 
 .active{
-  background-color: darksalmon;
+  background-color: steelblue;
 }
 
 .hover {
-  box-shadow: 0px 7px 25px rgb(108, 108, 108);
+  box-shadow: 0px 10px 25px rgb(108, 108, 108);
 }
 
 .pagecontent {
+  width: 100%;
+  height: inherit;
+  margin: 0px 10px 0px 10px;
+  background-color: rgba(236, 228, 193, 0.67);
+}
+
+.flex {
+  display: flex;
 }
