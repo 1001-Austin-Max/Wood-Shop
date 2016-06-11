@@ -28,6 +28,9 @@ FEATURES:
  - Welcome + Navigation
 
  - Project Blog (Get Inspired)
+ User Generated content adds too much complexity to the project that is unneeded I can
+ make the project blogs for each person myself. This means I will need a good system
+ of adding content eas
 
  - Tools for starting new projects (Tool Belt)
 
@@ -35,4 +38,3 @@ FEATURES:
     - Turning
     - Furniture
     - Joinery
- 

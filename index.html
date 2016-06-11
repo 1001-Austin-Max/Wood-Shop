@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="style.css">
     <title>The Wood Shop</title>
   </head>
@@ -8,36 +9,36 @@
     <img src="resources/images/Wood_Shop_Logo.png" id="logo">
     <header>
       <h1>Create</h1>
-      <button href="Imagine">Imagine</button>
-      <button href="Design">Desgin</button>
-      <button href="Build">Build</button>
+      <ul>
+        <li name="Imagine" id="content-selector">Imagine</li>
+        <li name="Build" id="content-selector">Build</li>
+        <li name="Design" id="content-selector">Desgin</li>
+      </ul>
     </header>
-    <a href="top"></a>
     <main class="hide">
-      <div id="Imagine" class="container">
-        <div id="section-title"><h2>Imagine</h2></div>
+      <a href="top"></a>
+      <div id="section-title"></div>
+      <section id="Imagine">
         <div id="navbar">
+          <h3>View Portfolios</h3>
           <ul>
-            <li href="Max-Austin">Max Austin</li>
-            <li href="Other-Person">Other Person</li>
-            <li href="Other-Person">Other Person</li>
-            <li href="Other-Person">Other Person</li>
-            <li href="Other-Person">Other Person</li>
-            <li href="Other-Person">Other Person</li>
-            <li href="Other-Person">Other Person</li>
+            <li id ="content-selector" name="maxaustin">Max Austin</li>
+            <li id="content-selector" name="person1">Person1</li>
+            <li>Person2</li>
+            <li>Person3</li>
           </ul>
         </div>
-        <div id="page-content">
-          <div id="Max-Austin">This is Max Austin's page</div>
-          <div id="Other-Person" class="hide">This is other person's page</div>
+        <div class="pagecontent">
+          <section id="maxaustin" class="hide">This is maxaustin's page</section>
+          <section id="person1" class="hide">This is person1's page</section>
         </div>
-      </div>
-      <div id="Design">
+      </section>
+      <section id="Design">
         <p>Design</p>
-      </div>
-      <div id="Build">
+      </section>
+      <section id="Build" class="container">
         <p>Build</p>
-      </div>
+      </section>
     </main>
     <footer>
 

@@ -1,14 +1,15 @@
 $(function(){
-  $('*').click(function(){
-    var clicked = $(this);
-    $('div[id='+clicked.attr('href')+']').siblings().hide(600, function(){
-      $('div[id='+clicked.attr('href')+']').show(600);
-    });
+  $('header li').hover(function(){
+    $(this).toggleClass('hover', 200);
   });
-  $('header button').click(function(){
+
+  $('header li').click(function(){
+    $('#section-title').html("<h2>"+$(this).attr('name')+"</h2>");
+  });
+  $('html #content-selector').click(function(){
     $('main').removeClass('hide');
-    $('header').animate({height: '80vh'}, 600, function(){
-      $('main').show(600);
-    });
+    $('header').animate({height: '50vh'});
+    $(this).addClass('active').siblings().removeClass('active');
+    $('#'+$(this).attr('name')).show(500).siblings().filter('section').hide(500);
   });
 });
