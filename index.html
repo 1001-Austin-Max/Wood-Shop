@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="style.css">
     <title>The Wood Shop</title>
   </head>
@@ -23,22 +24,71 @@
           <li>Person2</li>
           <li>Person3</li>
         </ul>
-        <div class="pagecontent">
-          <section id="maxaustin" class="hide">
+        <!-- <div class="pagecontent"> -->
+          <section id="maxaustin">
             <ul id="tabs">
-              <li id="content-selector" name="past-projects">Past Projects</li>
-              <li id="content-selector" name="clock-box">Clock Box</li>
-              <li id="content-selector" name="segmented-bowl">Segmented Bowl</li>
+              <li>
+                Freshman Year
+                <div id="dropdown" class="hide">
+                  <div id="content-selector" name="lamp">Lamp</div>
+                </div>
+              </li>
+              <li>
+                Sophomore Year
+                <div id="dropdown" class="hide">
+                  <div id="content-selector" name="cup">Coffee Cup</div>
+                  <div id="content-selector" name="moms-bowl">Mom's Birthday Present</div>
+                </div>
+              </li>
+              <li>
+                Junior Year
+                <div id="dropdown" class="hide">
+                  <div id="content-selector" name="pencil-holder">Pencil Holder</div>
+                  <div id="content-selector" name="clock-box">Clock Box</div>
+                  <div id="content-selector" name="cutting-board">Cutting Board</div>
+                </div>
+              </li>
+              <li>
+                Current
+                <div id="dropdown" class="hide">
+                  <div id="content-selector" name="seg-bowl">Segmented Bowl</div>
+                </div>
+              </li>
             </ul>
-            <section id="past-projects" class="hide"></section>
-            <section id="clock-box" class="hide"></section>
-            <section id="segmented-bowl" class="hide"></section>
+            <section id="lamp" class="content"></section>
+            <section id="cup" class="content"></section>
+            <section id="moms-bowl" class="content"></section>
+            <section id="pencil-holder" class="content"></section>
+            <section id="clock-box" class="content"></section>
+            <section id="cutting-board" class="content"></section>
+            <section id="seg-bowl" class="content"></section>
           </section>
           <section id="person1" class="hide">This is person1's page</section>
-        </div>
+        <!-- </div> -->
       </section>
-      <section id="design">
-        <p>Design</p>
+      <section id="design" class="flex">
+        <ul id="navbar">
+          <h3>Toolbelt</h3>
+          <li id ="content-selector" name="turning">Turning</li>
+          <li id="content-selector" name="furniture">Furniture</li>
+          <li id="content-selector" name="other">Other</li>
+        </ul>
+        <div class="pagecontent">
+          <section id="turning" class="hide">
+            <ul id="tabs">
+              <li>
+                Segmented Bowl Designer
+                <div id="dropdown" class="hide">
+                  <div id="content-selector" name="use">Use</div>
+                  <div id="content-selector" name="download">Download</div>
+                </div>
+              </li>
+            </ul>
+            <section id="use" class="hide content"></section>
+            <section id="download" class="hide content"></section>
+          </section>
+          <section id="furniture" class="hide">Furniture</section>
+          <section id="other" class="hide">Other</section>
       </section>
       <section id="build">
         <p>Build</p>
