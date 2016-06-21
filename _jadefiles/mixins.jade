@@ -1,0 +1,13 @@
+mixin image-carousel(...images)
+  .image-carousel
+    i(class="material-icons") chevron_left
+    .image-wrapper
+      each image in images
+        img(src=image)
+    i(class="material-icons") chevron_right
+
+mixin navbar
+  .navbar
+    a(href="imagine.html" class="button") Imagine
+    a(href="design.html" class="button") Design
+    a(href="build.html" class="button") Build
