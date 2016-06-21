@@ -1,4 +1,5 @@
 $(function(){
+
   $('*#content-selector').hover(function(){
     $(this).toggleClass('hover', 200);
   });
